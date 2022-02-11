@@ -15,6 +15,6 @@ plugins {
     id("xyz.jpenilla.toothpick.settings") version "1.1.0-SNAPSHOT"
 }
 
-val forkName = "Purpur"
+val forkName = "InfiniteMC"
 rootProject.name = forkName.toLowerCase(Locale.ROOT)
 setupToothpickProject(rootProject, forkName)

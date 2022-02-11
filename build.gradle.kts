@@ -5,7 +5,7 @@ plugins {
 }
 
 toothpick {
-    forkName = "Purpur"
+    forkName = "InfiniteMC"
     groupId = "net.pl3x.purpur"
     forkUrl = "https://github.com/pl3xgaming/Purpur"
     val versionTag = System.getenv("BUILD_NUMBER")
@@ -20,11 +20,11 @@ toothpick {
     upstreamBranch = "origin/master"
 
     server {
-        project = projects.purpurServer.dependencyProject
+        project = projects.infinitemcServer.dependencyProject
         patchesDir = rootProject.projectDir.resolve("patches/server")
     }
     api {
-        project = projects.purpurApi.dependencyProject
+        project = projects.infinitemcApi.dependencyProject
         patchesDir = rootProject.projectDir.resolve("patches/api")
     }
 }
