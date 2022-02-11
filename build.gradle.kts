@@ -7,7 +7,7 @@ plugins {
 toothpick {
     forkName = "InfiniteMC"
     groupId = "net.pl3x.purpur"
-    forkUrl = "https://github.com/pl3xgaming/Purpur"
+    forkUrl = "https://github.com/killerprojecte/InfiniteMC"
     val versionTag = System.getenv("BUILD_NUMBER")
         ?: "\"${commitHash() ?: error("Could not obtain git hash")}\""
     forkVersion = "git-$forkName-$versionTag"
@@ -40,10 +40,5 @@ subprojects {
     java {
         sourceCompatibility = JavaVersion.toVersion(8)
         targetCompatibility = JavaVersion.toVersion(8)
-    }
-
-    publishing.repositories.maven {
-        url = uri("https://repo.pl3x.net/snapshots")
-        credentials(PasswordCredentials::class)
     }
 }
