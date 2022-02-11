@@ -18,7 +18,7 @@ index 3ef0a08..95ba3cd 100644
 -            <groupId>net.pl3x.purpur</groupId>
 +            <groupId>flyproject</groupId>
 -            <artifactId>purpur-api</artifactId>
-+            <artifactId>infinitemc</artifactId>
++            <artifactId>infinitemc-api</artifactId>
              <!-- Purpur end -->
              <version>${project.version}</version>
 @@ -201,7 +201,7 @@
