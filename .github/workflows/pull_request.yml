@@ -16,6 +16,8 @@ jobs:
         run: git config --global user.email "no-reply@github.com" && git config --global user.name "Github Actions"
       - name: Apply Patches
         run: ./gradlew applyPatches --stacktrace -x javadoc
+      - name: Create lib dir
+        run: mkdir InfiniteMC-Server/lib
       - name: Local lib
         run: cp libs/api.jar InfiniteMC-Server/lib/api.jar
       - name: Paperclip
