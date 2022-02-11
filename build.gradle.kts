@@ -6,7 +6,7 @@ plugins {
 
 toothpick {
     forkName = "InfiniteMC"
-    groupId = "net.pl3x.purpur"
+    groupId = "flyproject"
     forkUrl = "https://github.com/killerprojecte/InfiniteMC"
     val versionTag = System.getenv("BUILD_NUMBER")
         ?: "\"${commitHash() ?: error("Could not obtain git hash")}\""
