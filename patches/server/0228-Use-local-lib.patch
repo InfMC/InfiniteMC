@@ -1,0 +1,40 @@
+From 32cf0e97ce925bfe0d2fa6f9fcdd72c850683c4a Mon Sep 17 00:00:00 2001
+From: FlyProject <jim20071128@163.com>
+Date: Fri, 11 Feb 2022 14:51:14 +0800
+Subject: [PATCH 2/2] Use local lib
+
+---
+ pom.xml | 7 ++++---
+ 1 file changed, 4 insertions(+), 3 deletions(-)
+
+diff --git a/pom.xml b/pom.xml
+index 95ba3cd..79df7e3 100644
+--- a/pom.xml
++++ b/pom.xml
+@@ -40,11 +40,12 @@
+     <dependencies>
+         <dependency>
+             <!-- Purpur start - our "upstream" is Paper (not Tuinity), so this is necessary for DependencyLoading.kt to work properly -->
+-            <groupId>org.purpurmc.purpur</groupId>
++            <groupId>net.pl3x.purpur</groupId>
+             <artifactId>purpur-api</artifactId>
+             <!-- Purpur end -->
+             <version>${project.version}</version>
+-            <scope>compile</scope>
++            <scope>system</scope>
++            <systemPath>${project.basedir}/lib/api.jar</systemPath>
+         </dependency>
+         <dependency>
+             <groupId>com.destroystokyo.paper</groupId>
+@@ -201,7 +202,7 @@
+         <!-- Purpur - Snapshots -->
+         <repository>
+             <id>purpur-snapshots</id>
+-            <url>https://repo.purpurmc.org/snapshots</url>
++            <url>https://repo.purpurmc.org/snapshots/</url>
+         </repository>
+     </repositories>
+ 
+-- 
+1.8.3.1
+
