@@ -82,7 +82,7 @@ index 8d27fff773b74014351bfbfeed0197272234be4a..b1b12a46f0b662aff24357b407b65124
 +        pingCommandOutput = getString("settings.messages.ping-command-output", pingCommandOutput);
      }
  
-     public static String serverModName = "Purpur";
+     public static String serverModName = "InfiniteMC";
 diff --git a/src/main/java/net/pl3x/purpur/command/PingCommand.java b/src/main/java/net/pl3x/purpur/command/PingCommand.java
 new file mode 100644
 index 0000000000000000000000000000000000000000..1d636d7c541d127a473d5be2509e5db29936e8ad

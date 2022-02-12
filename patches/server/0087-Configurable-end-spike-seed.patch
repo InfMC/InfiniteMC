@@ -40,6 +40,6 @@ index 1a9d5409d38be0884c005524069c341a2dc27365..7a95f27827cbf5d5f69e0f3d55f327ba
 +        if (!TimingsManager.hiddenConfigs.contains("settings.seed.end-spike")) TimingsManager.hiddenConfigs.add("settings.seed.end-spike");
 +    }
 +
-     public static String serverModName = "Purpur";
+     public static String serverModName = "InfiniteMC";
      private static void serverModName() {
-         serverModName = getString("settings.server-mod-name", serverModName);
+         serverModName = "InfiniteMC";
