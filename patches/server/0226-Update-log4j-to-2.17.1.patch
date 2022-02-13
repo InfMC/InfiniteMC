@@ -1,0 +1,62 @@
+From d88580c527df83b3e0135f35fb533268bcbce501 Mon Sep 17 00:00:00 2001
+From: FlyProject <jim20071128@163.com>
+Date: Sun, 13 Feb 2022 00:34:49 +0800
+Subject: [PATCH] Update log4j to 2.17.1
+
+---
+ pom.xml | 15 +++++----------
+ 1 file changed, 5 insertions(+), 10 deletions(-)
+
+diff --git a/pom.xml b/pom.xml
+index f89a8ea..b392dde 100644
+--- a/pom.xml
++++ b/pom.xml
+@@ -26,15 +26,7 @@
+     </parent>
+ 
+     <dependencyManagement>
+-        <dependencies>
+-            <dependency>
+-                <groupId>org.apache.logging.log4j</groupId>
+-                <artifactId>log4j-bom</artifactId>
+-                <version>2.11.2</version>
+-                <type>pom</type>
+-                <scope>import</scope>
+-            </dependency>
+-        </dependencies>
++        <!--Remove Bom--> 
+     </dependencyManagement>
+ 
+     <dependencies>
+@@ -85,16 +77,19 @@
+         <dependency>
+             <groupId>org.apache.logging.log4j</groupId>
+             <artifactId>log4j-core</artifactId>
++            <version>2.17.1</version>
+             <scope>compile</scope>
+         </dependency>
+         <dependency>
+             <groupId>org.apache.logging.log4j</groupId>
+             <artifactId>log4j-api</artifactId>
++            <version>2.17.1</version>
+             <scope>compile</scope>
+         </dependency>
+         <dependency>
+             <groupId>org.apache.logging.log4j</groupId>
+             <artifactId>log4j-iostreams</artifactId>
++            <version>2.17.1</version>
+             <scope>compile</scope>
+         </dependency>
+         <!-- Paper - Async loggers -->
+@@ -158,7 +153,7 @@
+         <dependency>
+             <groupId>org.apache.logging.log4j</groupId>
+             <artifactId>log4j-slf4j-impl</artifactId>
+-            <!--<version>2.8.1</version>--> <!--handled by bom-->
++            <version>2.8.1</version> <!--remove handled by bom-->
+             <scope>runtime</scope>
+             <exclusions>
+                 <!-- included in minecraft-server -->
+-- 
+1.8.3.1
+
