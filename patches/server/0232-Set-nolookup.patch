@@ -14,7 +14,7 @@ index 0c06249..d939b59 100644
 @@ -348,6 +348,7 @@ public class Main {
          }
        //Get log4j version - InfiniteMC
-       System.out.println("[InfiniteMC] Using log4j version: " + org.apache.logging.log4j.util.PropertiesUtil.class.getPackage().getImplementationVersion()); 
+       System.out.println("[InfiniteMC] Using log4j version: " + org.apache.logging.log4j.core.Version.getProductString()); 
 +      System.setProperty("log4j2.formatMsgNoLookups","true");
     }
  
