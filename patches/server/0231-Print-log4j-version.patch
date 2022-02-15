@@ -17,7 +17,7 @@ index 856e98d..8ce7153 100644
          }
 -    }
 +      //Get log4j version - InfiniteMC
-+      System.out.println("[InfiniteMC] Using log4j version: " + org.apache.logging.log4j.util.PropertiesUtil.class.getPackage().getImplementationVersion()); 
++      System.out.println("[InfiniteMC] Using log4j version: " + org.apache.logging.log4j.core.Version.getProductString()); 
 +   }
  
      // Paper start
