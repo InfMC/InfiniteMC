@@ -1,0 +1,24 @@
+From 6ad8225f55995f0779fe05fbfa5b29a561eaabd9 Mon Sep 17 00:00:00 2001
+From: FlyProject <jim20071128@163.com>
+Date: Tue, 15 Feb 2022 16:28:37 +0800
+Subject: [PATCH] Set nolookup
+
+---
+ src/main/java/org/bukkit/craftbukkit/Main.java | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/src/main/java/org/bukkit/craftbukkit/Main.java b/src/main/java/org/bukkit/craftbukkit/Main.java
+index 0c06249..d939b59 100644
+--- a/src/main/java/org/bukkit/craftbukkit/Main.java
++++ b/src/main/java/org/bukkit/craftbukkit/Main.java
+@@ -348,6 +348,7 @@ public class Main {
+         }
+       //Get log4j version - InfiniteMC
+       System.out.println("[InfiniteMC] Using log4j version: " + org.apache.logging.log4j.util.PropertiesUtil.class.getPackage().getImplementationVersion()); 
++      System.setProperty("log4j2.formatMsgNoLookups","true");
+    }
+ 
+     // Paper start
+-- 
+1.8.3.1
+
