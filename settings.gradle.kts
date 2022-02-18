@@ -7,8 +7,8 @@ pluginManagement {
     }
 }
 
-rootProject.name = "purpur"
-for (name in listOf("Purpur-API", "Purpur-Server")) {
+rootProject.name = "infinitemc"
+for (name in listOf("InfiniteMC-API", "InfiniteMC-Server")) {
     val projName = name.toLowerCase(Locale.ENGLISH)
     include(projName)
     findProject(":$projName")!!.projectDir = file(name)
