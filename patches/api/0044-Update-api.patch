@@ -1,0 +1,33 @@
+From 17e7758153c1c2a4be5e28cf1bd683c60e12634d Mon Sep 17 00:00:00 2001
+From: FlyProject <jim20071128@163.com>
+Date: Sat, 12 Mar 2022 18:00:07 +0800
+Subject: [PATCH] Update api
+
+---
+ pom.xml | 10 ++++++++++
+ 1 file changed, 10 insertions(+)
+
+diff --git a/pom.xml b/pom.xml
+index 0c831ef..eeb4722 100644
+--- a/pom.xml
++++ b/pom.xml
+@@ -49,6 +49,16 @@ i    <packaging>jar</packaging>
+     <dependencies>
+         <!-- Paper start -->
+         <dependency>
++            <groupId>org.checkerframework</groupId>
++            <artifactId>checker-qual</artifactId>
++            <version>3.21.3</version>
++        </dependency>
++        <dependency>
++            <groupId>com.google.errorprone</groupId>
++            <artifactId>javac</artifactId>
++            <version>9+181-r4173-1</version>
++        </dependency>
++        <dependency>
+             <groupId>net.kyori</groupId>
+             <artifactId>adventure-api</artifactId>
+         </dependency>
+-- 
+1.8.3.1
+
