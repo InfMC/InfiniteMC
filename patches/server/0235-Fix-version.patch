@@ -1,0 +1,25 @@
+From 8d9203e586c0d1956090133f8448cbde22b14685 Mon Sep 17 00:00:00 2001
+From: FlyProject <jim20071128@163.com>
+Date: Sun, 3 Apr 2022 21:52:02 +0800
+Subject: [PATCH] Fix version
+
+---
+ src/main/java/org/bukkit/craftbukkit/util/Versioning.java | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/main/java/org/bukkit/craftbukkit/util/Versioning.java b/src/main/java/org/bukkit/craftbukkit/util/Versioning.java
+index 13b984393..28c34877b 100644
+--- a/src/main/java/org/bukkit/craftbukkit/util/Versioning.java
++++ b/src/main/java/org/bukkit/craftbukkit/util/Versioning.java
+@@ -11,7 +11,7 @@ public final class Versioning {
+     public static String getBukkitVersion() {
+         String result = "Unknown-Version";
+ 
+-        InputStream stream = Bukkit.class.getClassLoader().getResourceAsStream("META-INF/maven/net.pl3x.purpur/purpur-api/pom.properties"); // Tuinity // Purpur
++        InputStream stream = Bukkit.class.getClassLoader().getResourceAsStream("META-INF/maven/flyproject/infinitemc-api/pom.properties"); // Tuinity // Purpur
+         Properties properties = new Properties();
+ 
+         if (stream != null) {
+-- 
+2.27.0
+
