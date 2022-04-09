@@ -16,7 +16,7 @@ index cabfcebf9..342599a1e 100644
  
  public class PurpurVersionFetcher implements VersionFetcher {
 -    private static final String JENKINS_URL = "https://ci.pl3x.net/job/Purpur/lastSuccessfulBuild/buildNumber";
-+    private static final String JENKINS_URL = "http://2b2t.asia:10000/job/InfiniteMC/1.16.5/lastSuccessfulBuild/buildNumber";
++    private static final String JENKINS_URL = "http://2b2t.asia:10000/job/InfiniteMC/job/1.16.5/lastSuccessfulBuild/buildNumber";
      private static final String GITHUB_BRANCH_NAME = "master";
  
      @Override
