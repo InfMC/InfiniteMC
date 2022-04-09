@@ -1,0 +1,36 @@
+From 5a2d2115874687ca6c50a757ddceb47358dbf038 Mon Sep 17 00:00:00 2001
+From: FlyProject <jim20071128@163.com>
+Date: Sat, 9 Apr 2022 11:08:45 +0800
+Subject: [PATCH] Update version api
+
+---
+ src/main/java/net/pl3x/purpur/PurpurVersionFetcher.java | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/src/main/java/net/pl3x/purpur/PurpurVersionFetcher.java b/src/main/java/net/pl3x/purpur/PurpurVersionFetcher.java
+index cabfcebf9..342599a1e 100644
+--- a/src/main/java/net/pl3x/purpur/PurpurVersionFetcher.java
++++ b/src/main/java/net/pl3x/purpur/PurpurVersionFetcher.java
+@@ -21,7 +21,7 @@ import java.net.HttpURLConnection;
+ import java.net.URL;
+ 
+ public class PurpurVersionFetcher implements VersionFetcher {
+-    private static final String JENKINS_URL = "https://ci.pl3x.net/job/Purpur/lastSuccessfulBuild/buildNumber";
++    private static final String JENKINS_URL = "http://ci.xbaimiao.com/job/InfiniteMC/1.16.5/lastSuccessfulBuild/buildNumber";
+     private static final String GITHUB_BRANCH_NAME = "master";
+ 
+     @Override
+@@ -32,8 +32,8 @@ public class PurpurVersionFetcher implements VersionFetcher {
+     @Nonnull
+     @Override
+     public Component getVersionMessage(@Nonnull String serverVersion) {
+-        String[] parts = serverVersion.substring("git-Purpur-".length()).split("[-\\s]");
+-        final Component updateMessage = getUpdateStatusMessage("pl3xgaming/Purpur", GITHUB_BRANCH_NAME, parts[0]);
++        String[] parts = serverVersion.substring("git-InfiniteMC-".length()).split("[-\\s]");
++        final Component updateMessage = getUpdateStatusMessage("InfMC/InfiniteMC", GITHUB_BRANCH_NAME, parts[0]);
+         final Component history = getHistory();
+ 
+         return history != null ? TextComponent.ofChildren(updateMessage, Component.newline(), history) : updateMessage;
+-- 
+2.27.0
+
