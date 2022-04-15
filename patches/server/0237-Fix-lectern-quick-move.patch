@@ -1,0 +1,29 @@
+From 6ed5924fe6b31e1f115833746293e0d72ee33ad0 Mon Sep 17 00:00:00 2001
+From: FlyProject <jim20071128@163.com>
+Date: Fri, 15 Apr 2022 12:27:39 +0800
+Subject: [PATCH] Fix lectern quick move
+
+---
+ .../net/minecraft/world/inventory/ContainerLectern.java     | 6 ++++++
+ 1 file changed, 6 insertions(+)
+
+diff --git a/src/main/java/net/minecraft/world/inventory/ContainerLectern.java b/src/main/java/net/minecraft/world/inventory/ContainerLectern.java
+index 656877923..76266c025 100644
+--- a/src/main/java/net/minecraft/world/inventory/ContainerLectern.java
++++ b/src/main/java/net/minecraft/world/inventory/ContainerLectern.java
+@@ -118,6 +118,12 @@ public class ContainerLectern extends Container {
+         }
+     }
+ 
++    @Override
++    public ItemStack shiftClick(EntityHuman entityhuman, int i) {
++        return ItemStack.NULL_ITEM;
++    }
++
++
+     @Override
+     public void a(int i, int j) {
+         super.a(i, j);
+-- 
+2.27.0
+
