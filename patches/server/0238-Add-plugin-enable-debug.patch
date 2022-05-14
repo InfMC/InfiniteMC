@@ -1,0 +1,24 @@
+From dbb900fa9bb74b7f2827226ea2247a872a808400 Mon Sep 17 00:00:00 2001
+From: FlyProject <jim20071128@163.com>
+Date: Sat, 14 May 2022 13:07:09 +0800
+Subject: [PATCH] Add plugin enable debug
+
+---
+ src/main/java/org/bukkit/craftbukkit/CraftServer.java | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/src/main/java/org/bukkit/craftbukkit/CraftServer.java b/src/main/java/org/bukkit/craftbukkit/CraftServer.java
+index e9d6c38a0..3382cf847 100644
+--- a/src/main/java/org/bukkit/craftbukkit/CraftServer.java
++++ b/src/main/java/org/bukkit/craftbukkit/CraftServer.java
+@@ -429,6 +429,7 @@ public final class CraftServer implements Server {
+ 
+         for (Plugin plugin : plugins) {
+             if ((!plugin.isEnabled()) && (plugin.getDescription().getLoad() == type)) {
++                getLogger().info("Try to enable plugin: " + plugin.getName());
+                 enablePlugin(plugin);
+             }
+         }
+-- 
+2.27.0
+

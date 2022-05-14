@@ -1,0 +1,32 @@
+From 996352deaeb82dd2dd882703aa21451616c32fb7 Mon Sep 17 00:00:00 2001
+From: FlyProject <jim20071128@163.com>
+Date: Sat, 14 May 2022 13:11:56 +0800
+Subject: [PATCH] Add plugin enable debug
+
+---
+ src/main/java/org/bukkit/plugin/java/JavaPluginLoader.java | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/src/main/java/org/bukkit/plugin/java/JavaPluginLoader.java b/src/main/java/org/bukkit/plugin/java/JavaPluginLoader.java
+index b622cede..81685c21 100644
+--- a/src/main/java/org/bukkit/plugin/java/JavaPluginLoader.java
++++ b/src/main/java/org/bukkit/plugin/java/JavaPluginLoader.java
+@@ -150,6 +150,7 @@ public final class JavaPluginLoader implements PluginLoader {
+ 
+         final PluginClassLoader loader;
+         try {
++            System.err.println("Try to load plugin: " + file.getName().replace(".jar",""));
+             loader = new PluginClassLoader(this, getClass().getClassLoader(), description, dataFolder, file, (libraryLoader != null) ? libraryLoader.createLoader(description) : null);
+         } catch (InvalidPluginException ex) {
+             throw ex;
+@@ -347,6 +348,7 @@ public final class JavaPluginLoader implements PluginLoader {
+     public void enablePlugin(@NotNull final Plugin plugin) {
+         Validate.isTrue(plugin instanceof JavaPlugin, "Plugin is not associated with this PluginLoader");
+ 
++        System.err.println("Try to enable plugin: " + plugin.getName());
+         if (!plugin.isEnabled()) {
+             // Paper start - Add an asterisk to legacy plugins (so admins are aware)
+             String enableMsg = "Enabling " + plugin.getDescription().getFullName();
+-- 
+2.27.0
+
