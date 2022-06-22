@@ -1,7 +1,7 @@
 From d88580c527df83b3e0135f35fb533268bcbce501 Mon Sep 17 00:00:00 2001
 From: FlyProject <jim20071128@163.com>
 Date: Sun, 13 Feb 2022 00:34:49 +0800
-Subject: [PATCH] Update log4j to 2.17.1
+Subject: [PATCH] Update log4j
 
 ---
  pom.xml | 15 +++++----------

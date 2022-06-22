@@ -65,7 +65,7 @@ index 74fc4fc2216cf82e1546ef3d567f2750b1240df1..108be36fc37c04eece6ccb93d19e58a3
          return config.getString(path, config.getString(path));
      }
 +
-+    public static String timingsUrl = "https://timings.pl3x.net";
++    public static String timingsUrl = "https://timings.aikar.co";
 +    private static void timingsSettings() {
 +        timingsUrl = getString("settings.timings.url", timingsUrl);
 +        if (!TimingsManager.hiddenConfigs.contains("server-ip")) TimingsManager.hiddenConfigs.add("server-ip");

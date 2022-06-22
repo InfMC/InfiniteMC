@@ -30,6 +30,6 @@ index 95b55fb93049c6686e13aab78ba1ae2b2fd5785b..2442309843bb62e08ae13c46d335c65f
 +        serverModName = "InfiniteMC";
 +    }
 +
-     public static String timingsUrl = "https://timings.pl3x.net";
+     public static String timingsUrl = "https://timings.aikar.co";
      private static void timingsSettings() {
          timingsUrl = getString("settings.timings.url", timingsUrl);
