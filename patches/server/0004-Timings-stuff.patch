@@ -52,7 +52,7 @@ index 35810f42d7a0cd50a4cbe90e8d698fe57914c889..5e672a0660d0aceffcdb26d185590ca1
          String timingsURL = null;
          try {
 -            HttpURLConnection con = (HttpURLConnection) new URL("http://timings.aikar.co/post").openConnection();
-+            HttpURLConnection con = (HttpURLConnection) new URL(net.pl3x.purpur.PurpurConfig.timingsUrl + "/post").openConnection(); // Purpur
++            HttpURLConnection con = (HttpURLConnection) new URL("https://timings.aikar.co/post").openConnection(); // InfiniteMC
              con.setDoOutput(true);
              String hostName = "BrokenHost";
              try {
